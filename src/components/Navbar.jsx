@@ -4,7 +4,9 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <p>ITAM.hack</p>
-      <button className="profile">Личный кабинет</button>
+      <button className="profile">
+        <a href="">Личный кабинет</a>
+      </button>
     </div>
   );
 }
