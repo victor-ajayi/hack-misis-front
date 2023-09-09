@@ -7,8 +7,9 @@ export default function Navbar() {
       <p>
         <span className="itam">ITAM.</span>clubs
       </p>
-      <Link to="/login">
-        <button className="profile">Личный кабинет</button>
+
+      <Link to="/login" className="profile">
+        Личный кабинет
       </Link>
     </div>
   );
