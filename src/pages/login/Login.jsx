@@ -2,8 +2,7 @@ import { useState } from "react";
 import { useSignIn } from "react-auth-kit";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
-import "./Login.css";
-
+import "../../components/styles/Login.css";
 export default function Login() {
   const [formData, setFormData] = useState({
     email: "",

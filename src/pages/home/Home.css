@@ -56,7 +56,54 @@ h1 {
   margin-top: 0;
   color: #727272;
 }
+.rectangle {
+  width: 800px;
+  height: 600px;
+  border: 1px solid gray;
+  background-color: #ffffff;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ClubPhoto{
+  transform: scale(0.4);
+  position: absolute;
+  border: 1px solid gray;
+  bottom: 8%;
+  right: 0%;
+  border-radius: 5%;
+}
+.clubName{
+  font-size: 1.6em;
+  font-weight: 600;
+  margin: 30px;
+}
+.gamedev{
+  top:-10%;
+}
+#courses{
+  transform: scale(0.27);
+  left: -35%;
+  top:-45%
+}
+#robot{
+  transform: scale(0.27);
+  left: -55%;
+  top:-42%
+}
+#ml{
+  transform: scale(0.3);
+  left:-47%;
+  top:-35%
 
+}
+.clubInfo{
+  margin-top: 320px;
+  margin-left: 40px;
+  margin-right: 40px;
+
+}
 .club-group {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
