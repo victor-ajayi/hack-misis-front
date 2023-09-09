@@ -33,7 +33,7 @@ export default function Home() {
 
         {!isAuthenticated() && (
           <button className="register" onClick={handleClick}>
-            Загеристрироваться!
+            Присоединяйся к нам!
           </button>
         )}
 

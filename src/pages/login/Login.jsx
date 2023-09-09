@@ -3,7 +3,6 @@ import { useSignIn } from "react-auth-kit";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import "./Login.css";
-
 export default function Login() {
   const [formData, setFormData] = useState({
     email: "",
@@ -67,9 +66,12 @@ export default function Login() {
             <button className="login" type="submit">
               Войти
             </button>
-            <button className="create-account" type="submit">
+           
+            <button className="create-account"  onClick={() => window.location.href = '/registration'} type="submit">
               Зарегистрироваться
+
             </button>
+           
           </div>
         </form>
       </div>

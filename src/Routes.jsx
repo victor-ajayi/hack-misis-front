@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Profile from "./pages/profile/Profile";
-
+import Registration from "./pages/registration/Registration";
 export default function MyRoutes() {
   return (
     <>
@@ -24,6 +24,7 @@ export default function MyRoutes() {
                 </RequireAuth>
               }
             />
+            <Route path="/registration" element= {<Registration />}/>
           </Routes>
         </BrowserRouter>
       </AuthProvider>
