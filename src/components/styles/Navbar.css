@@ -4,9 +4,10 @@
   align-items: center;
   border-bottom: 1px solid #e5e5e5;
   height: 4em;
+  padding-inline: 2em;
 }
 
-.navbar p {
+.navbar span {
   cursor: pointer;
 }
 
