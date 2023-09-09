@@ -1,8 +1,10 @@
+import "./styles/Navbar.css";
+
 export default function Navbar() {
   return (
-    <div>
+    <div className="navbar">
       <p>ITAM.hack</p>
-      <p>Личный кабинет</p>
+      <button className="profile">Личный кабинет</button>
     </div>
   );
 }
