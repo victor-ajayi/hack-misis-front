@@ -1,7 +1,37 @@
+import { useState } from "react";
+import { useSignIn } from "react-auth-kit";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import "./Login.css";
 
 export default function Login() {
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+  const signIn = useSignIn();
+  const navigate = useNavigate();
+
+  // try {
+  //   data = loginUser(formData);
+  // } catch (e) {
+  //   console.error(e);
+  // }
+
+  // if (signIn()) {
+  //   navigate("/profile");
+  // }
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => {
+      return {
+        ...prevData,
+        [name]: value,
+      };
+    });
+  };
+
   return (
     <div>
       <Navbar />
@@ -13,11 +43,10 @@ export default function Login() {
               className="item"
               type="text"
               name="email"
-              maxlength="15"
-              minlength="4"
-              pattern="^[a-zA-Z0-9_.-]*$"
               id="email"
-              placeholder="Email"
+              onChange={handleChange}
+              value={formData.email}
+              placeholder="Почта"
               required
             />
           </div>
@@ -25,9 +54,10 @@ export default function Login() {
             <input
               className="item"
               type="password"
-              name="Пароль"
-              minlength="6"
+              name="password"
               id="password"
+              onChange={handleChange}
+              value={formData.password}
               placeholder="Пароль"
               required
             />

@@ -1,22 +1,21 @@
-import { useNavigate } from "react-router-dom";
+import { useIsAuthenticated } from "react-auth-kit";
 import { Link } from "react-router-dom";
 import "./styles/Navbar.css";
 
 export default function Navbar() {
-  const navigate = useNavigate();
+  const isAuthenticated = useIsAuthenticated();
 
-  function handleClick() {
-    navigate("/");
-  }
   return (
     <div className="navbar">
-      <p onClick={handleClick}>
+      <Link to="/">
         <span className="itam">ITAM.</span>clubs
-      </p>
-
-      <Link to="/login" className="profile">
-        Личный кабинет
       </Link>
+
+      {isAuthenticated() && (
+        <Link to="/login" className="profile">
+          Личный кабинет
+        </Link>
+      )}
     </div>
   );
 }

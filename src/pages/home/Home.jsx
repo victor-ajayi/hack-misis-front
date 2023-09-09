@@ -1,7 +1,16 @@
+import { useIsAuthenticated } from "react-auth-kit";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import "./Home.css";
 
 export default function Home() {
+  const navigate = useNavigate();
+  const isAuthenticated = useIsAuthenticated();
+
+  function handleClick() {
+    navigate("/login");
+  }
+
   return (
     <div>
       <Navbar />
@@ -14,7 +23,11 @@ export default function Home() {
           </h1>
         </div>
 
-        <button className="register">Загеристрироваться!</button>
+        {!isAuthenticated() && (
+          <button className="register" onClick={handleClick}>
+            Загеристрироваться!
+          </button>
+        )}
 
         <section className="clubs-container">
           <h3>Познакомьтесь с сообществами</h3>
