@@ -4,6 +4,7 @@ import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Profile from "./pages/profile/Profile";
 import Registration from "./pages/registration/Registration";
+import Leaderbord from "./pages/leaderbord/Leaderbord";
 export default function MyRoutes() {
   return (
     <>
@@ -25,6 +26,7 @@ export default function MyRoutes() {
               }
             />
             <Route path="/registration" element= {<Registration />}/>
+            <Route path="/leaderbord" element= {<Leaderbord />}/>
           </Routes>
         </BrowserRouter>
       </AuthProvider>

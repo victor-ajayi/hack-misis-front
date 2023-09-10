@@ -48,23 +48,36 @@ h1 {
   font-weight: 500;
   font-size: 1.6rem;
   margin-bottom: 0;
-}
 
+}
+.club {
+  background-color: #b9e2c0;
+}
+.club:hover {
+  background-color: #60d273;
+}
 .clubs-container h5 {
   font-weight: 400;
   font-size: 1.2rem;
   margin-top: 0;
   color: #727272;
 }
+
 .rectangle {
+  border-radius: 5%;
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
   width: 800px;
   height: 600px;
   border: 1px solid gray;
-  background-color: #ffffff;
+  background-color: #e4e6e4;
   position: absolute;
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.rectangle.show {
+  transform: scale(1);
 }
 .ClubPhoto{
   transform: scale(0.4);
