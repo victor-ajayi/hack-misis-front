@@ -1,11 +1,15 @@
 main {
-  padding-top: 3em;
-  padding: 0 8rem;
+  padding: 3rem 8rem;
 }
 
 h1 {
   font-size: 2.5em;
+  margin: 0;
   font-weight: 500;
+}
+
+.header {
+  text-align: center;
 }
 
 #clubs {
@@ -48,7 +52,6 @@ h1 {
   font-weight: 500;
   font-size: 1.6rem;
   margin-bottom: 0;
-
 }
 .club {
   background-color: #b9e2c0;
@@ -76,13 +79,15 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.link_contacts{
+.link_contacts {
   color: rgb(76, 73, 93);
 }
+
 .rectangle.show {
   transform: scale(1);
 }
-.ClubPhoto{
+
+.ClubPhoto {
   transform: scale(0.4);
   position: absolute;
   border: 1px solid gray;
@@ -90,35 +95,33 @@ h1 {
   right: 0%;
   border-radius: 5%;
 }
-.clubName{
+.clubName {
   font-size: 1.6em;
   font-weight: 600;
   margin: 30px;
 }
-.gamedev{
-  top:-10%;
+.gamedev {
+  top: -10%;
 }
-#courses{
+#courses {
   transform: scale(0.27);
   left: -35%;
-  top:-45%
+  top: -45%;
 }
-#robot{
+#robot {
   transform: scale(0.27);
   left: -55%;
-  top:-42%
+  top: -42%;
 }
-#ml{
+#ml {
   transform: scale(0.3);
-  left:-47%;
-  top:-35%
-
+  left: -47%;
+  top: -35%;
 }
-.clubInfo{
+.clubInfo {
   margin-top: 320px;
   margin-left: 40px;
   margin-right: 40px;
-
 }
 .club-group {
   display: grid;

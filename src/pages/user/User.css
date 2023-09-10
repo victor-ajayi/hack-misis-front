@@ -1,0 +1,11 @@
+.user-page {
+  display: flex;
+}
+
+.dashboard {
+  padding: 3em 4em;
+}
+
+p {
+  font-size: 2rem;
+}

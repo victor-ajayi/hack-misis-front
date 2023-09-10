@@ -1,23 +1,39 @@
+import Cookies from "js-cookie";
 import { useState } from "react";
 import { useSignIn } from "react-auth-kit";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
+import { createUser } from "../../utils";
 import "./Login.css";
 export default function Login() {
   const [formData, setFormData] = useState({
-    email: "",
+    login: "",
     password: "",
   });
   const signIn = useSignIn();
   const navigate = useNavigate();
 
-  // try {
-  //   data = loginUser(formData);
-  // } catch (e) {
-  //   console.error(e);
-  // }
+  async function handleSubmit() {
+    try {
+      const data = await createUser(formData);
+      console.log(data);
+      Cookies.set("_id", data.id);
+      if (data.id) {
+        navigate("/profile", { replace: true });
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  }
 
-  // if (signIn()) {
+  // if (
+  //   signIn({
+  //     token: data?.access_token,
+  //     tokenType: "Bearer",
+  //     authState: data?.login,
+  //     expiresIn: data?.expires_in,
+  //   })
+  // ) {
   //   navigate("/profile");
   // }
 
@@ -35,17 +51,17 @@ export default function Login() {
     <div>
       <Navbar />
       <div className="registration-cssave">
-        <form>
+        <form onSubmit={(e) => e.preventDefault()}>
           <h3 className="text-center">Вход в аккаунт</h3>
           <div className="form-group">
             <input
               className="item"
               type="text"
-              name="email"
-              id="email"
+              name="login"
+              id="login"
               onChange={handleChange}
-              value={formData.email}
-              placeholder="Почта"
+              value={formData.login}
+              placeholder="Логин"
               required
             />
           </div>
@@ -62,16 +78,16 @@ export default function Login() {
             />
           </div>
 
-          <div className="form-group">
-            <button className="login" type="submit">
+          <span>
+            Есть аккаунт?{" "}
+            <Link to="/login" style={{ color: "#2b953d" }}>
               Войти
-            </button>
-           
-            <button className="create-account"  onClick={() => window.location.href = '/registration'} type="submit">
+            </Link>
+          </span>
+          <div className="form-group">
+            <button className="login" type="submit" onClick={handleSubmit}>
               Зарегистрироваться
-
             </button>
-           
           </div>
         </form>
       </div>

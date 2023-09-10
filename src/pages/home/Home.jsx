@@ -1,3 +1,4 @@
+import Cookies from "js-cookie";
 import { useState } from "react";
 import { useIsAuthenticated } from "react-auth-kit";
 import { useNavigate } from "react-router-dom";
@@ -13,15 +14,17 @@ import "./Home.css";
 export default function Home() {
   const navigate = useNavigate();
   const isAuthenticated = useIsAuthenticated();
+  const id = Cookies.get("_id");
 
   function handleClick() {
     navigate("/login");
   }
 
   let [ClubCartOpen, setCartOpen] = useState("false");
+
   return (
     <div>
-      <Navbar />
+      <Navbar id />
       <main className="main-container">
         <div className="header">
           <h1>
@@ -30,7 +33,6 @@ export default function Home() {
             студенческой проектной деятельности
           </h1>
         </div>
-
         {!isAuthenticated() && (
           <button className="register" onClick={handleClick}>
             Присоединяйся к нам!
@@ -54,7 +56,13 @@ export default function Home() {
                   <br />
                   <br />
                   <br />
-                  Контакты:  <a href="https://t.me/+WQeYWDOPnvs5yhhY" className="link_contacts">Telegram-чат </a>
+                  Контакты:{" "}
+                  <a
+                    href="https://t.me/+WQeYWDOPnvs5yhhY"
+                    className="link_contacts"
+                  >
+                    Telegram-чат{" "}
+                  </a>
                 </p>
               </div>
             </div>
@@ -72,7 +80,13 @@ export default function Home() {
                   <br />
                   <br />
                   <br />
-                  Контакты: <a href="https://t.me/+zTBGzdqNc4xlZWUy" className="link_contacts">Telegram-чат </a>
+                  Контакты:{" "}
+                  <a
+                    href="https://t.me/+zTBGzdqNc4xlZWUy"
+                    className="link_contacts"
+                  >
+                    Telegram-чат{" "}
+                  </a>
                 </p>
               </div>
             </div>
@@ -90,7 +104,13 @@ export default function Home() {
                   <br />
                   <br />
                   <br />
-                  Контакты:  <a href="https://t.me/+N7viqkb05zVlZjJi" className="link_contacts">Telegram-чат </a>
+                  Контакты:{" "}
+                  <a
+                    href="https://t.me/+N7viqkb05zVlZjJi"
+                    className="link_contacts"
+                  >
+                    Telegram-чат{" "}
+                  </a>
                 </p>
               </div>
             </div>
@@ -106,7 +126,13 @@ export default function Home() {
                   <br />
                   <br />
                   <br />
-                  Контакты: <a href="https://t.me/+qv-J493b9lFmYmQy" className="link_contacts">Telegram-чат </a>
+                  Контакты:{" "}
+                  <a
+                    href="https://t.me/+qv-J493b9lFmYmQy"
+                    className="link_contacts"
+                  >
+                    Telegram-чат{" "}
+                  </a>
                 </p>
               </div>
             </div>
@@ -124,7 +150,13 @@ export default function Home() {
                   <br />
                   <br />
                   <br />
-                  Контакты:  <a href="https://t.me/aiknowledgeclub" className="link_contacts">Telegram-чат </a>
+                  Контакты:{" "}
+                  <a
+                    href="https://t.me/aiknowledgeclub"
+                    className="link_contacts"
+                  >
+                    Telegram-чат{" "}
+                  </a>
                 </p>
               </div>
             </div>
@@ -140,7 +172,10 @@ export default function Home() {
                   <br />
                   <br />
                   <br />
-                  Контакты: <a href="https://t.me/itatmisis" className="link_contacts">Telegram-чат </a>
+                  Контакты:{" "}
+                  <a href="https://t.me/itatmisis" className="link_contacts">
+                    Telegram-чат{" "}
+                  </a>
                 </p>
               </div>
             </div>
@@ -173,7 +208,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <br/>  <br/>  <br/>  <br/>
+      <br /> <br /> <br /> <br />
     </div>
   );
 }

@@ -1,0 +1,65 @@
+main {
+  padding: 3rem 5rem;
+}
+
+.team-list {
+  margin-top: 1em;
+  font-weight: 400;
+}
+
+.team-list--header,
+.team--member {
+  display: grid;
+  grid-template-columns: 5fr 2fr 3fr 1fr;
+  padding: 0.5em 1em;
+}
+
+.team-list--header {
+  font-weight: 500;
+}
+
+.team--member {
+  background-color: #f9f9f9;
+  border-top: 1px solid #b6b6b6;
+}
+
+.team--member:last-child {
+  border-bottom: 1px solid #b6b6b6;
+}
+
+.tags {
+  border: 1px solid transparent;
+  border-radius: 20px;
+  outline: 3px solid #d9ebdc;
+  background-color: #b9e2c0;
+  padding-inline: 1em;
+  font-size: 14px;
+  width: fit-content;
+}
+
+.name,
+.role,
+.points {
+  width: fit-content;
+}
+
+.points {
+  font-weight: 500;
+}
+
+.achievements {
+  margin-top: 2em;
+  font-weight: 500;
+}
+
+.event {
+  margin-top: 0.5em;
+  font-weight: 400;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.event p {
+  margin: 0;
+}
