@@ -54,7 +54,7 @@ export default function Home() {
                   <br />
                   <br />
                   <br />
-                  Контакты: Telegram-чат https://t.me/+WQeYWDOPnvs5yhhY
+                  Контакты:  <a href="https://t.me/+WQeYWDOPnvs5yhhY" className="link_contacts">Telegram-чат </a>
                 </p>
               </div>
             </div>
@@ -72,7 +72,7 @@ export default function Home() {
                   <br />
                   <br />
                   <br />
-                  Контакты: Telegram-чат https://t.me/+zTBGzdqNc4xlZWUy
+                  Контакты: <a href="https://t.me/+zTBGzdqNc4xlZWUy" className="link_contacts">Telegram-чат </a>
                 </p>
               </div>
             </div>
@@ -90,7 +90,7 @@ export default function Home() {
                   <br />
                   <br />
                   <br />
-                  Контакты: Telegram-чат https://t.me/+N7viqkb05zVlZjJi
+                  Контакты:  <a href="https://t.me/+N7viqkb05zVlZjJi" className="link_contacts">Telegram-чат </a>
                 </p>
               </div>
             </div>
@@ -106,7 +106,7 @@ export default function Home() {
                   <br />
                   <br />
                   <br />
-                  Контакты: Telegram-чат https://t.me/+qv-J493b9lFmYmQy
+                  Контакты: <a href="https://t.me/+qv-J493b9lFmYmQy" className="link_contacts">Telegram-чат </a>
                 </p>
               </div>
             </div>
@@ -124,7 +124,7 @@ export default function Home() {
                   <br />
                   <br />
                   <br />
-                  Контакты: Telegram-чат https://t.me/aiknowledgeclub
+                  Контакты:  <a href="https://t.me/aiknowledgeclub" className="link_contacts">Telegram-чат </a>
                 </p>
               </div>
             </div>
@@ -140,7 +140,7 @@ export default function Home() {
                   <br />
                   <br />
                   <br />
-                  Контакты: Telegram-канал https://t.me/itatmisis
+                  Контакты: <a href="https://t.me/itatmisis" className="link_contacts">Telegram-чат </a>
                 </p>
               </div>
             </div>

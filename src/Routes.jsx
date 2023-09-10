@@ -4,7 +4,8 @@ import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Profile from "./pages/profile/Profile";
 import Registration from "./pages/registration/Registration";
-import Leaderbord from "./pages/leaderbord/Leaderbord";
+import LeaderbordTeams from "./pages/leaderbordTeams/LeaderbordTeams";
+import LeaderbordUsers from "./pages/leaderbordUsers/LeaderbordUsers"
 export default function MyRoutes() {
   return (
     <>
@@ -26,7 +27,8 @@ export default function MyRoutes() {
               }
             />
             <Route path="/registration" element= {<Registration />}/>
-            <Route path="/leaderbord" element= {<Leaderbord />}/>
+            <Route path="/LeaderbordTeams" element= {<LeaderbordTeams />}/>
+            <Route path="/LeaderbordUsers" element= {<LeaderbordUsers />}/>
           </Routes>
         </BrowserRouter>
       </AuthProvider>

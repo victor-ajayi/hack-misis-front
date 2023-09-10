@@ -76,6 +76,9 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.link_contacts{
+  color: rgb(76, 73, 93);
+}
 .rectangle.show {
   transform: scale(1);
 }
