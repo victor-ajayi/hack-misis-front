@@ -58,8 +58,8 @@ button {
   background-color: #60d273;
 }
 
-@media (max-width: 576px) {
-  .registration-cssave form {
-    padding: 50px 20px;
-  }
+.register-subheader {
+  font-size: 1rem;
+  color: #828282;
+  margin-bottom: 2rem;
 }

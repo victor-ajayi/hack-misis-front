@@ -1,5 +1,6 @@
 .user-page {
-  display: flex;
+  display: grid;
+  grid-template-columns: 3fr auto;
 }
 
 .dashboard {
@@ -8,4 +9,76 @@
 
 p {
   font-size: 2rem;
+}
+
+.profile-header {
+  display: flex;
+  gap: 2rem;
+}
+
+.profile {
+  width: 200px;
+  height: 200px;
+  border: 1px solid transparent;
+  border-radius: 100px;
+}
+
+.profile--name {
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.profile--role {
+  font-size: 18px;
+}
+
+.bio {
+  color: inherit;
+  font-weight: 500;
+  margin-top: 1em;
+}
+
+.profile--bio {
+  font-size: 1rem;
+  color: #4d4d4d;
+}
+
+.stack h3 {
+  margin-top: 1em;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.stack-item {
+  margin-right: 0.8em;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  outline: 3px solid #d9ebdc;
+  background-color: #b9e2c0;
+  padding-inline: 1em;
+  font-size: 14px;
+  width: fit-content;
+}
+
+.stack-item:last-child {
+  margin-right: 0;
+}
+
+.find-team-group {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7rem;
+}
+
+.find-team {
+  padding: 0.8rem 1.5rem;
+  display: block;
+  border: 1px solid transparent;
+  margin-top: 2rem;
+  width: fit-content;
+  font-weight: 500;
+  border-radius: 1.5rem;
+  background-color: #e4e4e4;
 }

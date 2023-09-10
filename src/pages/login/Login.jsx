@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import { createUser } from "../../utils";
 import "./Login.css";
+
 export default function Login() {
   const [formData, setFormData] = useState({
     login: "",
@@ -13,9 +14,10 @@ export default function Login() {
   const signIn = useSignIn();
   const navigate = useNavigate();
 
+  let data;
   async function handleSubmit() {
     try {
-      const data = await createUser(formData);
+      data = await createUser(formData);
       console.log(data);
       Cookies.set("_id", data.id);
       if (data.id) {
@@ -30,8 +32,8 @@ export default function Login() {
   //   signIn({
   //     token: data?.access_token,
   //     tokenType: "Bearer",
-  //     authState: data?.login,
-  //     expiresIn: data?.expires_in,
+  //     authState: data?.id,
+  //     expiresIn: 30,
   //   })
   // ) {
   //   navigate("/profile");
@@ -52,7 +54,10 @@ export default function Login() {
       <Navbar />
       <div className="registration-cssave">
         <form onSubmit={(e) => e.preventDefault()}>
-          <h3 className="text-center">Вход в аккаунт</h3>
+          <Link to="/">
+            <span className="itam">ITAM.</span>clubs
+          </Link>
+          <p className="register-subheader">Скорее присоединяйся к нам!</p>
           <div className="form-group">
             <input
               className="item"

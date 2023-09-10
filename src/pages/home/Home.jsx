@@ -32,12 +32,12 @@ export default function Home() {
             организации <br />
             студенческой проектной деятельности
           </h1>
+          {!id && (
+            <button className="register" onClick={handleClick}>
+              Присоединяйся к нам!
+            </button>
+          )}
         </div>
-        {!isAuthenticated() && (
-          <button className="register" onClick={handleClick}>
-            Присоединяйся к нам!
-          </button>
-        )}
 
         <section className="clubs-container">
           <h3>Познакомьтесь с сообществами</h3>
