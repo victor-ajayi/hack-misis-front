@@ -1,13 +1,14 @@
 import { AuthProvider } from "react-auth-kit";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Dashboard from "./pages/dashboard/Dashboard";
+import FindTeam from "./pages/find-team/FindTeam";
 import Home from "./pages/home/Home";
 import LeaderbordTeams from "./pages/leaderbordTeams/LeaderbordTeams";
 import LeaderbordUsers from "./pages/leaderbordUsers/LeaderbordUsers";
 import Login from "./pages/login/Login";
-import Registration from "./pages/registration/Registration";
+import Register from "./pages/register/Register";
 import Team from "./pages/team/Team";
 import User from "./pages/user/User";
-import Dashboard from "./pages/dashboard/Dashboard"
 export default function MyRoutes() {
   return (
     <>
@@ -30,10 +31,11 @@ export default function MyRoutes() {
                 </RequireAuth>
               }
             /> */}
-            <Route path="/registration" element={<Registration />} />
+            <Route path="/register" element={<Register />} />
             <Route path="/LeaderbordTeams" element={<LeaderbordTeams />} />
             <Route path="/LeaderbordUsers" element={<LeaderbordUsers />} />
-            <Route path="/Dashboard" element={<Dashboard/>}/>
+            <Route path="/find-team" element={<FindTeam />} />
+            <Route path="/Dashboard" element={<Dashboard />} />
           </Routes>
         </BrowserRouter>
       </AuthProvider>

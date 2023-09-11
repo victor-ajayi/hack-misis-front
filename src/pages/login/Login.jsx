@@ -52,46 +52,42 @@ export default function Login() {
   return (
     <div>
       <Navbar />
-      <div className="registration-cssave">
+      <div className="form-container">
         <form onSubmit={(e) => e.preventDefault()}>
           <Link to="/">
             <span className="itam">ITAM.</span>clubs
           </Link>
           <p className="register-subheader">Скорее присоединяйся к нам!</p>
-          <div className="form-group">
-            <input
-              className="item"
-              type="text"
-              name="login"
-              id="login"
-              onChange={handleChange}
-              value={formData.login}
-              placeholder="Логин"
-              required
-            />
-          </div>
-          <div className="form-group">
-            <input
-              className="item"
-              type="password"
-              name="password"
-              id="password"
-              onChange={handleChange}
-              value={formData.password}
-              placeholder="Пароль"
-              required
-            />
-          </div>
+          <input
+            className="item"
+            type="text"
+            name="login"
+            id="login"
+            onChange={handleChange}
+            value={formData.login}
+            placeholder="Логин"
+            required
+          />
+          <input
+            className="item"
+            type="password"
+            name="password"
+            id="password"
+            onChange={handleChange}
+            value={formData.password}
+            placeholder="Пароль"
+            required
+          />
 
-          <span>
+          <div>
             Есть аккаунт?{" "}
-            <Link to="/login" style={{ color: "#2b953d" }}>
-              Войти
+            <Link to="/register" style={{ color: "#2b953d" }}>
+              Зарегистрироваться
             </Link>
-          </span>
+          </div>
           <div className="form-group">
             <button className="login" type="submit" onClick={handleSubmit}>
-              Зарегистрироваться
+              Войти
             </button>
           </div>
         </form>

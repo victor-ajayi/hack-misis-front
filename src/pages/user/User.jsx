@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import profile from "../../img/profile.jpg";
 import Sidebar from "./Sidebar";
@@ -31,9 +32,9 @@ export default function User() {
           </div>
           <div className="find-team-group">
             <div>У тебя пока нет комнады {":("}</div>
-            <a href="#" className="find-team">
+            <Link to="/find-team" className="find-team">
               Искать команду
-            </a>
+            </Link>
           </div>
         </main>
       </div>
