@@ -1,22 +1,24 @@
-.table{
-   position: absolute;
-   left: 30%;
-   top: 25%;
+.table th,
+.table td {
+  border: 1px solid black;
+  padding: 5px;
+  line-height: 1.5; /* увеличиваем отступ между строками на 50% */
 }
-.table th, .table td{
-    border: 1px solid black;
-    padding: 5px;
-    line-height: 1.5; /* увеличиваем отступ между строками на 50% */
+.table th {
+  background-color: #b9e2c0;
 }
-.table th{
-    background-color: #b9e2c0;
+.table td:hover {
+  color: #828282;
+  cursor: pointer;
 }
-.table td:hover{
-    color: #828282;
-    cursor: pointer;
-}
- #header1{
-    position: relative;
+#header1 {
+  /* position: relative;
     top: -650px;
-    left: 600px;
+    left: 600px; */
+}
+
+.dashboard-page {
+  display: grid;
+  gap: 0;
+  grid-template-columns: auto 5fr;
 }
