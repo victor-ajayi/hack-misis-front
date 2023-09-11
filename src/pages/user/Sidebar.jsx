@@ -16,11 +16,11 @@ export default function Sidebar() {
       <div className="sidebar">
         <div>
           <div className="sidebar--top">
-            <a href="#" className="sidebar-link">
+            <a href="/profile" className="sidebar-link">
               <UilUser color="#60d273" />
               Профиль
             </a>
-            <a href="#" className="sidebar-link">
+            <a href="/dashboard" className="sidebar-link">
               <UilEstate color="#60d273" />
               Дэшборд
             </a>
